@@ -23,6 +23,7 @@ public class Triangle {
             current.add(1);
         }
     }
+    
     public static void main(String[] args) {
         Triangle t = new Triangle();
         t.generate(4);
