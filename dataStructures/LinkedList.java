@@ -63,11 +63,11 @@ public class LinkedList
 		Node n = head;
 		Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
 		while(n != null) {
-			previous = n;
-			if(table.get(n.data)) 
+			if(table.containsKey(n.data)) 
 				previous.next = n.next;
 			else
 				table.put(n.data, true);
+			previous = n;
 			n = n.next;
 		}
 	}
