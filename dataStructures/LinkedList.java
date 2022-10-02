@@ -59,13 +59,16 @@ public class LinkedList
 	
 	public void deleteDups() 
 	{
-		Node previous;
+		Node previous = null;  
 		Node n = head;
 		Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
-		table.put(n.data, true);
-		while(n.next != null) {
-			if(table.get(n.data)) ;
-
+		while(n != null) {
+			previous = n;
+			if(table.get(n.data)) 
+				previous.next = n.next;
+			else
+				table.put(n.data, true);
+			n = n.next;
 		}
 	}
 
@@ -109,10 +112,11 @@ public class LinkedList
 		list.insert(12);
 		list.insertAtStart(25);
 		
-		list.insertAt(0, 55);
+		list.insertAt(0, 25);
 		
-		list.deleteAt(2);
-		
+		//list.deleteAt(1);
+		list.insert(12);
+		list.deleteDups();
 		list.show();
     }
 }
