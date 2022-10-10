@@ -30,8 +30,11 @@ class Graph:
         am[e2][e1] = 1 
     return am
 
+  def bfs(self, start):
+    print("BFS")
+
 num_nodes1 = 5
 edges1 = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 0), (1, 4), (1, 3)]
 num_nodes1, len(edges1)
 g = Graph(num_nodes1, edges1)
-print(g.am())
+g.bfs(0)
