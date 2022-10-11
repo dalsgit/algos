@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.plaf.ColorUIResource;
-
 public class Triangle {
     protected List<List<Integer>> triangle = new ArrayList<>();
     

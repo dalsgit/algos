@@ -31,10 +31,21 @@ class Graph:
     return am
 
   def bfs(self, start):
-    print("BFS")
+    from collections import deque  
+    queue = deque()
+    queue.append(start)
+    print(queue)
+    while(queue.count > 0):
+      print(queue.popleft())
 
 num_nodes1 = 5
+
+#0 -- 1 -- 2
+#|    |  \ |
+#| -- 4 -- 3
+
 edges1 = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 0), (1, 4), (1, 3)]
 num_nodes1, len(edges1)
 g = Graph(num_nodes1, edges1)
-g.bfs(0)
+print(g)
+g.bfs(3)

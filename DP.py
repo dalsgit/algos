@@ -13,9 +13,10 @@ class DP:
         return False
 
     def fib(location, memo={}):
+        if(memo.get(location) != None): return memo[location]
         if(location <= 1): return 1
-        if(memo.)
-        return DP.fib(location - 1) + DP.fib(location - 2)
+        memo[location] = DP.fib(location - 1, memo) + DP.fib(location - 2, memo)
+        return memo[location]
 
 import sys
 #print(sys.getrecursionlimit())
