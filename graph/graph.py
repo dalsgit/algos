@@ -50,6 +50,6 @@ num_nodes1 = 5
 edges1 = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 0), (1, 4), (1, 3)]
 num_nodes1, len(edges1)
 g = Graph(num_nodes1, edges1)
-print(g)
-g.bfs(3)
+#print(g)
+#g.bfs(3)
 
